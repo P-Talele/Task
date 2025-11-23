@@ -12,7 +12,7 @@ export class AuthService {
         this.bcrypt = bcrypt;
     }
 
-    async register(name: string, email: string, password: string) {
+    async register(name: string, email: string, password: string, role: string) {
         const existing = await this.userModel.findOne({ email });
         if (existing) throw { status: 400, message: message.auth.Email_already_registered };
 
@@ -22,6 +22,7 @@ export class AuthService {
             name,
             email,
             password: hashPassword,
+            role
         });
 
         return user;
