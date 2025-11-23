@@ -8,7 +8,8 @@ Body (JSON):
 {
     "name": "tushar alewar",
     "email": "tushadr@gmail.com",
-    "password": "123456"
+    "password": "123456",
+    "role":"Member"
 }
 
 2. User Login
